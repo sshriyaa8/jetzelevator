@@ -9,10 +9,19 @@
     --secondary-darker: #3e2723;
     /* Deep Brown */
 
-    --text-dark: #333;
-    --text-light: #555;
+    --text-dark: #3e2723;
+    /* Deep Brown instead of black */
+    --text-light: #5d4037;
+    /* Medium Brown instead of gray */
     --white: #fff;
-    --bg-light: #f4f4f4;
+    --bg-light: #fbf8f5;
+    /* Warm Off-White */
+
+    /* New Brand Backgrounds */
+    --bg-warm-light: #fff8e1;
+    /* Very light amber */
+    --bg-brand-fade: #fff3e0;
+    /* Light orange tint */
 }
 
 * {
@@ -25,6 +34,8 @@
 body {
     background-color: var(--bg-light);
     color: var(--text-dark);
+    background-image: linear-gradient(to bottom right, #241614, #1a100e);
+    /* Subtle depth */
 }
 
 .container {
@@ -165,8 +176,8 @@ ul {
 
 /* Review Active Card Gradient */
 .review-card.active {
-    background: linear-gradient(135deg, var(--primary-color), #3e2723);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, var(--secondary-darker), #1a100e);
+    border: 1px solid var(--secondary-color);
 }
 
 /* Contact Form Input Polish */
@@ -520,7 +531,8 @@ ul {
 /* Why Choose Us Section */
 .why-choose-us {
     padding: 80px 0;
-    background-color: var(--white);
+    background: transparent;
+    /* Remove white/gradient */
 }
 
 .section-content {
@@ -692,13 +704,13 @@ ul {
 }
 
 .feature-card {
-    background: white;
+    background: var(--bg-card);
     padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: all 0.3s ease;
-    border-bottom: 4px solid transparent;
+    border: 1px solid var(--glass-border);
     cursor: default;
 }
 
@@ -725,7 +737,8 @@ ul {
 
 .feature-card h3 {
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    /* Orange pops on dark */
     font-size: 22px;
     font-weight: 700;
 }
@@ -736,6 +749,11 @@ ul {
 }
 
 /* Product Series Grid */
+.product-series-section {
+    background-color: var(--bg-light);
+    /* Slight contrast from warm light */
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -743,8 +761,8 @@ ul {
 }
 
 .product-card {
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
     padding: 40px 25px;
     border-radius: 15px;
     text-align: center;
@@ -781,7 +799,8 @@ ul {
 
 .card-icon {
     font-size: 45px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    /* Orange icon */
     margin-bottom: 25px;
     transition: transform 0.3s;
     position: relative;
@@ -799,7 +818,8 @@ ul {
     font-size: 20px;
     position: relative;
     z-index: 1;
-    color: var(--primary-color);
+    color: #fff;
+    /* White title */
 }
 
 .product-card p {
@@ -864,7 +884,7 @@ ul {
 
 .service-content,
 .customization-content {
-    background: #fff;
+    background: transparent;
 }
 
 .service-list {
@@ -878,15 +898,15 @@ ul {
     gap: 20px;
     align-items: flex-start;
     padding: 15px;
-    background: var(--bg-light);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
     transition: transform 0.2s;
 }
 
 .service-list li:hover {
     transform: translateX(5px);
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-list i {
@@ -902,18 +922,18 @@ ul {
 }
 
 .custom-item {
-    background-color: white;
+    background-color: var(--bg-card);
     padding: 20px 25px;
     border-left: 5px solid var(--secondary-color);
     border-radius: 0 8px 8px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--glass-border);
     border-left-width: 5px;
     /* ensure left border override */
 }
 
 .custom-item h5 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 8px;
     font-size: 18px;
     font-weight: 700;
@@ -953,10 +973,10 @@ ul {
 }
 
 .testimonial-card {
-    background: white;
+    background: var(--bg-card);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     position: relative;
     border-top: 4px solid var(--secondary-color);
     transition: transform 0.3s;
@@ -1035,6 +1055,11 @@ ul {
     overflow: hidden;
 }
 
+.partners-section {
+    background: var(--primary-color);
+    /* Dark Brown Background */
+}
+
 /* Video Section Compact */
 .video-grid {
     display: grid;
@@ -1081,7 +1106,8 @@ ul {
     width: 160px;
     height: 90px;
     padding: 10px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
+    /* Slightly translucent white for logo visibility */
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -1102,7 +1128,9 @@ ul {
 
 /* FAQ Section Neatness */
 .faq-section {
-    color: #f0f0f0;
+    background-color: var(--bg-brand-fade);
+    color: var(--text-dark);
+    /* Changed from light to dark for contrast */
 }
 
 .faq-layout {
@@ -1131,13 +1159,17 @@ ul {
     font-size: 16px;
     /* Slightly smaller text */
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Darker border for light bg */
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .faq-answer {
     padding-top: 8px;
     font-size: 14px;
-    color: #d0d0d0;
+    color: var(--text-light);
+    /* Dark text */
 }
 
 /* Footer Integration Compact */
@@ -1174,8 +1206,8 @@ ul {
 }
 
 .btn-white {
-    background-color: white;
-    color: var(--secondary-dark);
+    background-color: var(--secondary-color);
+    color: white;
     padding: 10px 30px;
     border-radius: 5px;
     font-weight: 700;
@@ -1183,13 +1215,14 @@ ul {
 }
 
 .btn-white:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-dark);
     color: white;
 }
 
 /* Main Footer */
 .main-footer {
-    background-color: #1a1512;
+    background-color: #150d0b;
+    /* Even darker for footer */
     /* Deep dark brown/black */
     color: #ccc;
     padding: 80px 0 20px;
@@ -1440,14 +1473,17 @@ ul {
 
 /* Contact Form */
 .contact-form-wrapper {
-    background: #fff;
+    background: white;
+    /* Clean White */
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(255, 152, 0, 0.15);
+    /* Orange shadow */
+    border: 1px solid rgba(255, 152, 0, 0.1);
 }
 
 .form-title {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 28px;
     margin-bottom: 30px;
     position: relative;
@@ -1485,6 +1521,7 @@ ul {
     margin-bottom: 8px;
     font-weight: 500;
     color: var(--text-dark);
+    /* Off-white */
     font-size: 14px;
 }
 
@@ -1492,11 +1529,13 @@ ul {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     font-size: 15px;
     transition: all 0.3s;
-    background: #fafafa;
+    background: rgba(255, 255, 255, 0.05);
+    /* Dark input */
+    color: white;
 }
 
 .form-group input:focus,
@@ -1504,7 +1543,7 @@ ul {
     border-color: var(--secondary-color);
     outline: none;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
 }
 
 .contact-form .btn-primary {
@@ -1536,6 +1575,7 @@ ul {
     /* Deep Orange text */
     background: -webkit-linear-gradient(#ff9800, #ff5722);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
 }
@@ -1549,8 +1589,7 @@ ul {
 }
 
 /* 2. Light Theme Conversion (Video & Partners) */
-.video-testimonials-section,
-.partners-section {
+.video-testimonials-section {
     background: var(--white-bg-gradient);
     /* Light background */
     color: #333;
@@ -1559,7 +1598,7 @@ ul {
 
 /* Video Card Aesthetics */
 .video-card {
-    background: white;
+    background: var(--bg-card);
     border: 1px solid rgba(255, 152, 0, 0.2);
     /* Subtle orange border */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -1573,11 +1612,11 @@ ul {
 
 .video-caption {
     background: white;
-    color: #333;
+    color: var(--text-dark);
     font-weight: 600;
     padding: 15px;
     text-align: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ffe0b2;
 }
 
 .play-button-overlay {
@@ -1589,7 +1628,8 @@ ul {
 /* Partner Logo Aesthetics */
 .partner-logo {
     background: white;
-    border: 1px solid #eee;
+    /* Clean White */
+    border: 1px solid rgba(255, 152, 0, 0.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -1600,25 +1640,26 @@ ul {
 
 /* FAQ Section Aesthetics */
 .faq-section {
-    background: #fff;
+    background: var(--bg-warm-light);
+    /* Cream background */
     /* Clean white */
-    color: #333;
+    color: var(--text-dark);
     border-top: 5px solid var(--secondary-color);
     /* Orange top border strip */
 }
 
 .faq-section .main-heading {
-    color: #333 !important;
-    /* Override white text */
+    color: var(--primary-color) !important;
+    /* Dark Headings */
 }
 
 .faq-question {
-    color: #4e342e;
+    color: var(--text-dark);
     /* Dark Brown text */
     font-weight: 600;
     border-bottom: 1px solid rgba(255, 152, 0, 0.2);
     /* Orange separator */
-    background: #fff;
+    background: white;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -1633,7 +1674,7 @@ ul {
 }
 
 .faq-answer {
-    color: #555;
+    color: var(--text-light);
     padding: 0 20px 20px 20px;
 }
 
@@ -1691,7 +1732,7 @@ ul {
 
 /* 1. Decorative Background Patterns */
 .video-testimonials-section {
-    background-color: #fff;
+    background-color: transparent;
     background-image: radial-gradient(#ff9800 1px, transparent 1px);
     background-size: 30px 30px;
     /* Dotted pattern */
@@ -1706,7 +1747,7 @@ ul {
     /* Extra space for divider */
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     /* Slanted bottom */
-    background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+    background: transparent;
     /* Warm light gradient */
 }
 
@@ -1728,11 +1769,12 @@ ul {
 .review-card.active {
     animation: floatCard 4s ease-in-out infinite;
     border: 2px solid var(--secondary-color);
-    background: white;
+    background: #fff3e0;
+    /* Light Orange Tint */
 }
 
 .review-card.active .review-text {
-    color: var(--secondary-dark);
+    color: var(--text-dark);
     /* Darker text for readability */
 }
 
@@ -1757,7 +1799,7 @@ ul {
 
 /* 5. Enhanced FAQ Styling */
 .faq-section {
-    background: linear-gradient(180deg, #ffffff 0%, #fffcf5 100%);
+    background: transparent;
     position: relative;
 }
 
@@ -1796,9 +1838,10 @@ ul {
 
 /* 6. Partner Section Refinement */
 .partners-section {
-    background: white;
-    border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
+    background: var(--secondary-color);
+    /* Vibrant Orange Background */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .partner-logo {
@@ -1832,6 +1875,7 @@ ul {
 
 .bento-white {
     background: #ffffff;
+    /* Crisp White */
     color: #333 !important;
     border: 1px solid #eee;
 }
@@ -1891,7 +1935,8 @@ ul {
     font-size: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    border: 4px solid white;
+    border: 4px solid var(--secondary-color);
+    /* Orange border instead of white */
     /* Cutout effect from line */
 }
 
@@ -1912,7 +1957,7 @@ ul {
 
 /* 3. Safety Orbit Diagram */
 .safety-diagram-mode {
-    background: white;
+    background: transparent;
     padding: 80px 0;
     overflow: hidden;
 }
@@ -1939,7 +1984,8 @@ ul {
     overflow: hidden;
     margin: 0 auto;
     box-shadow: 0 0 50px rgba(255, 152, 0, 0.3);
-    border: 5px solid white;
+    border: 5px solid var(--secondary-color);
+    /* Orange border */
     z-index: 2;
 }
 
@@ -2096,7 +2142,7 @@ ul {
    ========================================= */
 /* Reviews Section Background */
 .reviews-section {
-    background-color: #fff9f0;
+    background-color: transparent;
     /* Very light orange/cream tint */
     padding: 80px 0;
 }
@@ -2109,7 +2155,7 @@ ul {
 }
 
 .review-card {
-    background: white;
+    background: var(--bg-card);
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -2155,7 +2201,7 @@ ul {
 .review-text {
     font-size: 15px;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-light);
     margin-bottom: 25px;
     font-style: italic;
     position: relative;
