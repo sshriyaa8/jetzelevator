@@ -34,8 +34,6 @@
 body {
     background-color: var(--bg-light);
     color: var(--text-dark);
-    background-image: linear-gradient(to bottom right, #241614, #1a100e);
-    /* Subtle depth */
 }
 
 .container {
@@ -841,15 +839,18 @@ ul {
 .tech-item {
     text-align: center;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    /* Glass effect */
+    background: #fff;
+    /* Clean White */
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background 0.3s;
+    border: 1px solid rgba(255, 152, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s, transform 0.3s;
 }
 
 .tech-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 152, 0, 0.15);
 }
 
 .tech-item i {
@@ -869,7 +870,7 @@ ul {
 }
 
 .tech-item p {
-    color: #ddd;
+    color: var(--text-light);
     font-size: 15px;
     line-height: 1.7;
 }
@@ -898,15 +899,16 @@ ul {
     gap: 20px;
     align-items: flex-start;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.03);
+    background: #fff;
     border-radius: 8px;
     transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .service-list li:hover {
     transform: translateX(5px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.15);
 }
 
 .service-list i {
@@ -922,12 +924,12 @@ ul {
 }
 
 .custom-item {
-    background-color: var(--bg-card);
+    background-color: #fff;
     padding: 20px 25px;
     border-left: 5px solid var(--secondary-color);
     border-radius: 0 8px 8px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--glass-border);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 152, 0, 0.1);
     border-left-width: 5px;
     /* ensure left border override */
 }
@@ -948,7 +950,7 @@ ul {
     /* FontAwesome chevron-right */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #ddd;
+    color: #aaa;
     font-size: 14px;
 }
 
