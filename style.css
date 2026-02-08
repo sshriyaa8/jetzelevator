@@ -43,6 +43,11 @@
 body {
     background-color: var(--bg-light);
     color: var(--text-dark);
+    /* Aesthetic Overlay: Subtle Dot Pattern */
+    background-image: radial-gradient(#0a192f 0.5px, transparent 0.5px), radial-gradient(#0a192f 0.5px, var(--bg-light) 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 1;
 }
 
 .container {
@@ -415,7 +420,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.7) 100%);
     /* Slight overlay for text readability */
 }
 
@@ -714,11 +719,33 @@ ul {
     background: var(--bg-card);
     padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+    /* Multi-layered shadow for depth */
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(10, 25, 47, 0.05);
+    /* Subtle Navy Border */
     cursor: default;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Card Glow on Hover */
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.03), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
 }
 
 .feature-card:hover {
@@ -1804,6 +1831,7 @@ ul {
     border: 2px solid var(--secondary-color);
     background: #e3f2fd;
     /* Light Blue Tint */
+    box-shadow: 0 15px 40px rgba(10, 25, 47, 0.1);
 }
 
 .review-card.active .review-text {
@@ -1869,12 +1897,18 @@ ul {
     /* Indent active item */
 }
 
-/* 6. Partner Section Refinement */
+/* 6. Partner Section Refinement - Rich Navy Depth */
 .partners-section {
     background: var(--primary-color);
-    /* Navy Blue Background */
+    /* Navy Base */
+    /* Aesthetic Texture Overlay */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
 }
 
 .partner-logo {
@@ -2033,7 +2067,9 @@ ul {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
+    /* Modern Gradient Overlay */
+    background: linear-gradient(to right, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.6) 50%, rgba(10, 25, 47, 0.2) 100%);
+    z-index: 1;
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
